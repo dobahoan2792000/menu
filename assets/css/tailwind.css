@@ -1,0 +1,93 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@responsive{
+  .border-white-1px{
+    border: 1px solid white;
+  }
+  .top-80{
+    top:80px;
+  }
+  .font-menu{
+    font-size:13px;
+  }
+  .font-sub-menu{
+    font-size:10px;
+  }
+  .font-mon{
+    font-family: 'Montserrat';
+  }
+  .v-align{
+    transform:translateY(-50%);
+  }
+  .line::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 0;
+    background-color: black;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    -webkit-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    -moz-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    transition: all .2s cubic-bezier(.43,.1,0,.82);
+  }
+  .line:hover::before{
+    height: 3px;
+  }
+  .line-w::before{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    height: 0px;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    -moz-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    transition: all .2s cubic-bezier(.43,.1,0,.82);
+  }
+  .line-w:hover::before{
+    height: 3px;
+  }
+  .transtion-effect{
+    transition:all 1s;
+  }
+  .dot::before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    left: -20px;
+    color: inherit;
+    font-size: 18px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #fff;
+    line-height: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* -webkit-transition: left .2s ease-in-out;
+    -moz-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out; */
+    cursor: pointer;
+}
+  .dot{
+    left:0px;
+    transition: left .2s;
+    -webkit-font-smoothing: antialiased;
+  }
+  .dothover:hover .dot{
+      left:20px;
+  }
+}
+
+@font-face{
+  font-family:'Montserrat';
+  src:url('../../fonts/Montserrat/Montserrat-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
